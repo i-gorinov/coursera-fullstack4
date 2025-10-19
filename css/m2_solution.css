@@ -5,14 +5,17 @@
   padding: 0;
 }
 
-/* Adds slight padding around the entire page */
+/* Adds slight padding around the entire page and set the font family*/
 body {
+  font-family: "Georgia", serif;
   padding: 1%;
 }
 
-/* Centers the main heading */
+/* Centers the main heading
+and set the font size 75% larger than the body text*/
 h1 {
   text-align: center;
+  font-size: 175%;
 }
 
 /* Section-specific background colors for visual distinction */
@@ -161,6 +164,7 @@ section {
   padding: 5px;
   max-width: 100%; /* Prevents overflow on narrow screens */
   word-wrap: break-word; /* Ensures long titles wrap instead of overflowing */
+  font-size: 125%; /* Set font size of Section Titles 25% larger than body text*/
 }
 
 /* Section Contents Paragraph styling */
