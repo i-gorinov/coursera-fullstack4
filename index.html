@@ -5,10 +5,58 @@
 		<title>Assigment Solution for Module 2</title>
 		<!--<link rel="stylesheet" href="css/styles.css">-->
 		<style>
-			
+			* {
+				box-sizing: border-box;
+				margin: 0;
+				padding: 0;
+			}
+			h1{
+				text-align: center;
+			}
+			.section-title{
+				border-style: solid;
+				border-width: 2px;
+				border-color: black;
+			}
+			#chicken{
+				background-color: pink;
+			}
+			#beef{
+				background-color: brown;
+			}
+			#sushi{
+				background-color: lightblue;
+			}
+			section{
+				position: relative;
+				float:left;
+				width:33.33%;
+				background-color: grey;
+				border-style: solid;
+				border-width: 2px;
+				border-color: black;
+			}
+			.section-title{
+				position:absolute;
+				top:0;
+				right:0;
+			}
+
 		</style>
 	</head>
 	<body>
-
+		<h1>Our Menu</h1>
+		<section>
+			<div class="section-title" id="chicken">Chicken</div>
+			<p>Lorem ipsum dolor sit amet.</p>
+		</section>
+		<section>
+			<div class="section-title" id="beef">Beef</div>
+			<p>Lorem ipsum dolor sit amet.</p>
+		</section>
+		<section>
+			<div class="section-title" id="sushi">Sushi</div>
+			<p>Lorem ipsum dolor sit amet.</p>
+		</section>
 	</body>
 </html>
