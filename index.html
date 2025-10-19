@@ -2,21 +2,30 @@
 <html>
   <head>
     <meta charset="UTF-8" />
+    <!-- Ensures proper scaling and responsiveness on mobile devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Assigment Solution for Module 2</title>
-    <!--<link rel="stylesheet" href="css/styles.css">-->
+    <title>Assignment Solution for Module 2</title>
+
+    <!-- Internal CSS for layout and styling -->
     <style>
+      /* Global reset and box model normalization */
       * {
-        box-sizing: border-box;
+        box-sizing: border-box; /* Includes padding and border in element's total width/height */
         margin: 0;
         padding: 0;
       }
+
+      /* Adds slight padding around the entire page */
       body {
         padding: 1%;
       }
+
+      /* Centers the main heading */
       h1 {
         text-align: center;
       }
+
+      /* Section-specific background colors for visual distinction */
       #chicken {
         background-color: pink;
       }
@@ -27,13 +36,14 @@
         background-color: lightblue;
       }
 
-      /* Simple Responsive Framework. */
+      /* Container for responsive grid layout */
       .row {
-        width: 100%;
+        width: 100%; /* Ensures full-width container */
       }
 
-      /********** Large devices only **********/
+      /********** Large devices only (≥ 992px) **********/
       @media (min-width: 992px) {
+        /* Float-based grid system for large screens */
         .col-lg-1,
         .col-lg-2,
         .col-lg-3,
@@ -48,6 +58,8 @@
         .col-lg-12 {
           float: left;
         }
+
+        /* Width definitions for 12-column grid */
         .col-lg-1 {
           width: 6.33%;
         }
@@ -59,7 +71,7 @@
         }
         .col-lg-4 {
           width: 31.33%;
-        }
+        } /* Used for 3-up layout */
         .col-lg-5 {
           width: 39.66%;
         }
@@ -86,8 +98,9 @@
         }
       }
 
-      /********** Medium devices only **********/
+      /********** Medium devices only (768px–991px) **********/
       @media (min-width: 768px) and (max-width: 991px) {
+        /* Float-based grid system for tablets */
         .col-md-1,
         .col-md-2,
         .col-md-3,
@@ -102,6 +115,8 @@
         .col-md-12 {
           float: left;
         }
+
+        /* Width definitions for 12-column grid */
         .col-md-1 {
           width: 6.33%;
         }
@@ -119,7 +134,7 @@
         }
         .col-md-6 {
           width: 48%;
-        }
+        } /* Used for 2-up layout */
         .col-md-7 {
           width: 56.33%;
         }
@@ -137,43 +152,68 @@
         }
         .col-md-12 {
           width: 98%;
-        }
+        } /* Used to span full width */
       }
 
+      /* Section styling for each menu item */
       section {
         border: 1px solid black;
-        background-color: grey;
-        position: relative;
-        margin: 1%;
+        background-color: lightgray;
+        position: relative; /* Enables positioning of child elements like badges */
+        margin: 1%; /* Adds spacing between sections */
       }
+
+      /* Section Title styling */
       .section-title {
-        float: right;
+        float: right; /* Aligns badge to top-right corner */
         border-left: 1px solid black;
         border-bottom: 1px solid black;
         padding: 5px;
-        max-width: 100%;
-        word-wrap: break-word;
+        max-width: 100%; /* Prevents overflow on narrow screens */
+        word-wrap: break-word; /* Ensures long titles wrap instead of overflowing */
       }
+
+      /* Section Contents Paragraph styling */
       p {
-        clear: right;
-        padding: 5px;
+        clear: right; /* Forces content below floated Title */
+        padding: 5px; /* Adds internal spacing for readability */
       }
     </style>
   </head>
   <body>
     <div class="row">
       <h1>Our Menu</h1>
+
+      <!-- First section: Chicken -->
       <section class="col-lg-4 col-md-6">
         <div class="section-title" id="chicken">Chicken</div>
-        <p>Lorem ipsum dolor sit amet.</p>
+        <p>
+          Grilled to perfection and seasoned like it’s auditioning for
+          MasterChef. Comes with a whisper of rosemary and a smug sense of
+          superiority over boiled poultry.
+        </p>
       </section>
+
+      <!-- Second section: Beef -->
       <section class="col-lg-4 col-md-6">
         <div class="section-title" id="beef">Beef</div>
-        <p>Lorem ipsum dolor sit amet.</p>
+        <p>
+          <!--Used the character entity ref &apos; for apostrophies-->
+          Slow-cooked until it&apos;s softer than your last breakup. Rich, bold,
+          and unapologetically carnivorous—this beef doesn&apos;t do tofu
+          diplomacy.
+        </p>
       </section>
+
+      <!-- Third section: Sushi -->
+      <!-- On medium screens, this spans full width (col-md-12) -->
       <section class="col-lg-4 col-md-12">
         <div class="section-title" id="sushi">Sushi</div>
-        <p>Lorem ipsum dolor sit amet.</p>
+        <p>
+          Fresh, delicate, and rolled tighter than your deadlines. It&apos;s the
+          only dish that arrives dressed better than you and still insists on
+          being eaten raw.
+        </p>
       </section>
     </div>
   </body>
